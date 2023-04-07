@@ -11,10 +11,9 @@ export const generateRoast = async (imageDataUrl: string, apiKey: string) => {
   try {
     // Define the input prompt for the roast
     const prompt = `Roast someone based on this image description: ${imageDataUrl}`;
-
     // Call the OpenAI API
     const response = await openai.createCompletion({
-      model: 'davinci',
+      model: 'gpt-3.5-turbo',
       prompt,
       max_tokens: 50,
       n: 1,

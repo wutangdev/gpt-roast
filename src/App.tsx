@@ -20,7 +20,7 @@ const App: React.FC = () => {
     reader.onloadend = async () => {
       if (reader.result) {
         try {
-          const roast = await generateRoast(reader.result as string, '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');
+          const roast = await generateRoast(reader.result as string, 'openai-api-key');
           setRoastText(roast);
           setStep(2);
         } catch (error) {
